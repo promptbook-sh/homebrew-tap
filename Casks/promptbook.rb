@@ -1,11 +1,11 @@
 cask "promptbook" do
-  version "0.1.11"
-  sha256 "8cba7aedbc0c2301f90950c85a3e8dc59107171143cae793d5517c9f9b77e74d"
+  version "0.1.12"
+  sha256 "d98265b81c74a96671e9f01bbc4f274cda6e856d56963704037ab8dab0f1588b"
 
   url "https://github.com/vbario/promptbook-releases/releases/download/v#{version}/Promptbook-#{version}.dmg"
   name "PromptBook"
   desc "Terminal with a dockable, runnable notebook"
-  homepage "https://web-production-09445.up.railway.app/"
+  homepage "https://promptbook.sh/"
 
   # Follow the artifacts repo's latest release rather than parsing the URL, so
   # `brew livecheck` keeps working if the asset is ever renamed.
