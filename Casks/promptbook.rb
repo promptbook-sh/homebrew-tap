@@ -18,6 +18,20 @@ cask "promptbook" do
   # Gatekeeper accepts them on first launch and no caveat is needed.
   app "Promptbook.app"
 
+  # Homebrew fetches the disk image from GitHub, so a cask install is invisible
+  # to promptbook.sh without this. Anonymous: the version and the word "cask",
+  # nothing about the machine. Backgrounded and capped at five seconds so a
+  # network hiccup can neither fail nor slow the install, and silenced so it
+  # never prints over Homebrew's output. Note this also fires on
+  # `brew upgrade --cask`, so the count is installs plus upgrades.
+  postflight do
+    system_command "/bin/sh",
+                   args: ["-c",
+                          "curl -fsS -m 5 -o /dev/null " \
+                          "'https://promptbook.sh/api/download?src=cask&version=#{version}' " \
+                          ">/dev/null 2>&1 &"]
+  end
+
   zap trash: [
     "~/Library/Application Support/Promptbook",
     "~/Library/Preferences/app.promptbook.terminal.plist",
