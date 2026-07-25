@@ -2,7 +2,7 @@ cask "promptbook" do
   version "0.1.12"
   sha256 "d98265b81c74a96671e9f01bbc4f274cda6e856d56963704037ab8dab0f1588b"
 
-  url "https://github.com/vbario/promptbook-releases/releases/download/v#{version}/Promptbook-#{version}.dmg"
+  url "https://github.com/promptbook-sh/promptbook-releases/releases/download/v#{version}/Promptbook-#{version}.dmg"
   name "PromptBook"
   desc "Terminal with a dockable, runnable notebook"
   homepage "https://promptbook.sh/"
