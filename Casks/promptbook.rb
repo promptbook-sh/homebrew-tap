@@ -1,6 +1,6 @@
 cask "promptbook" do
-  version "0.3.0"
-  sha256 "b8ad141f84b90390295e369b0c2ad804e412f587e601ca9c179da8a8a56e7a24"
+  version "0.3.1"
+  sha256 "51cfdefb9ac1875c1f364fc9dcce40800f14cd7f49f85cfd1e6d4209867d9442"
 
   url "https://github.com/promptbook-sh/promptbook-releases/releases/download/v#{version}/Promptbook-#{version}.dmg"
   name "PromptBook"
